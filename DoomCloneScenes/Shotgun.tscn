@@ -1,0 +1,91 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Sprites/PumpActionShotgun/xstge0.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/PumpActionShotgun/xstfa0.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/PumpActionShotgun/xstfb0.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/PumpActionShotgun/xstgb0.png" type="Texture" id=8]
+[ext_resource path="res://DoomCloneScenes/Gun.gd" type="Script" id=9]
+[ext_resource path="res://Sprites/PumpActionShotgun/xstgc0.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/PumpActionShotgun/xstga0.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/PumpActionShotgun/xstgd0.png" type="Texture" id=14]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 4 ), ExtResource( 6 ), ExtResource( 13 ), ExtResource( 8 ), ExtResource( 12 ), ExtResource( 12 ), ExtResource( 12 ), ExtResource( 14 ), ExtResource( 14 ), ExtResource( 14 ), ExtResource( 12 ), ExtResource( 12 ), ExtResource( 1 ), ExtResource( 8 ), ExtResource( 13 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "Shoot",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 20.0
+} ]
+
+[node name="Shotgun" type="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00267911, -1.19209e-07, -0.00295997 )
+script = ExtResource( 9 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -40.0
+margin_top = -40.0
+
+[node name="GunSprite" type="AnimatedSprite" parent="CanvasLayer/Control"]
+position = Vector2( -153, 40 )
+rotation = 3.14159
+scale = Vector2( 2, 2 )
+frames = SubResource( 1 )
+animation = "Shoot"
+frame = 14
+playing = true
+centered = false
+flip_h = true
+flip_v = true
+
+[node name="GunRays" type="Spatial" parent="."]
+
+[node name="RayCast" type="RayCast" parent="GunRays"]
+transform = Transform( 1, 0, 0, 0, 0.997859, -0.0654031, 0, 0.0654031, 0.997859, 0, 0, 0 )
+enabled = true
+cast_to = Vector3( 0, 0, -20 )
+
+[node name="RayCast2" type="RayCast" parent="GunRays"]
+transform = Transform( 1, 0, 0, 0, 0.997564, 0.0697565, 0, -0.0697565, 0.997564, 0, 0, 0 )
+enabled = true
+cast_to = Vector3( 0, 0, -10 )
+
+[node name="RayCast3" type="RayCast" parent="GunRays"]
+transform = Transform( 0.993572, 0, 0.113203, 0, 1, 0, -0.113203, 0, 0.993572, 0, 0, 0 )
+enabled = true
+cast_to = Vector3( 0, 0, -15 )
+
+[node name="RayCast4" type="RayCast" parent="GunRays"]
+transform = Transform( 0.994522, 0, -0.104528, 0, 1, 0, 0.104528, 0, 0.994522, 0, 0, 0 )
+enabled = true
+cast_to = Vector3( 0, 0, -10 )
+
+[node name="RayCast5" type="RayCast" parent="GunRays"]
+transform = Transform( 0.998392, 0.00197855, -0.0566583, 0, 0.999391, 0.0348995, 0.0566928, -0.0348434, 0.997783, 0, 0, 0 )
+enabled = true
+cast_to = Vector3( 0, 0, -20 )
+
+[node name="RayCast6" type="RayCast" parent="GunRays"]
+transform = Transform( 0.993572, 0.00543128, 0.113073, 0, 0.998848, -0.0479781, -0.113203, 0.0476697, 0.992428, 0, 0, 0 )
+enabled = true
+cast_to = Vector3( 0, 0, -10 )
+
+[node name="RayCast7" type="RayCast" parent="GunRays"]
+transform = Transform( 0.99863, -0.000913388, 0.052328, 0, 0.999848, 0.0174524, -0.052336, -0.0174285, 0.998477, 0, 0, 0 )
+enabled = true
+cast_to = Vector3( 0, 0, -15 )
+
+[node name="RayCast8" type="RayCast" parent="GunRays"]
+transform = Transform( 0.999962, -7.61524e-05, 0.0087262, 0, 0.999962, 0.00872654, -0.00872654, -0.0087262, 0.999924, 0, 0, 0 )
+enabled = true
+cast_to = Vector3( 0, 0, -10 )

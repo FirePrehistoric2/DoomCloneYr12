@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://DoomCloneScenes/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://DoomCloneScenes/DoomCloneTestLevel.tscn" type="PackedScene" id=2]
+[ext_resource path="res://DoomCloneScenes/BasicGrunt.tscn" type="PackedScene" id=3]
+
+[node name="World" type="Spatial"]
+
+[node name="DoomCloneTestLevel2" parent="." instance=ExtResource( 2 )]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 20.1535, 1.66669, 5.09797 )
+
+[node name="Basic Grunt" parent="." instance=ExtResource( 3 )]
+transform = Transform( -1.5299e-07, 0, 2, 0, 3.5, 0, -3.5, 0, -8.74228e-08, -16.0337, 1.0459, -9.96456 )

@@ -1,0 +1,2 @@
+weaponsection "pulse"
+setslot 4 PulseMachinegun

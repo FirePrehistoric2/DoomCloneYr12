@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/pulsfir.wav-22cb90c8296fe8903004912399db27ad.sample"
+
+[deps]
+
+source_file="res://Sprites/PulseMachinegun/sounds/pulsfir.wav"
+dest_files=[ "res://.import/pulsfir.wav-22cb90c8296fe8903004912399db27ad.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
